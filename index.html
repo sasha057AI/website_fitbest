@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FitBest — мебель для салонов красоты</title>
+  <meta name="description" content="FitBest — кресла и стулья для салонов красоты и мастеров маникюра. Удобная, прочная мебель с доставкой по России.">
+  <link rel="icon" href="assets/logo-fitbest.png">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ШАПКА -->
+  <header class="header" id="top">
+    <div class="container header__inner">
+      <a href="#top" class="header__logo">
+        <img src="assets/logo-fitbest.png" alt="FitBest">
+      </a>
+
+      <nav class="nav" id="nav">
+        <a href="#catalog" class="nav__link">Каталог</a>
+        <a href="#advantages" class="nav__link">Преимущества</a>
+        <a href="#about" class="nav__link">О нас</a>
+        <a href="#contacts" class="nav__link">Контакты</a>
+      </nav>
+
+      <div class="header__side">
+        <a href="tel:+71111213" class="header__phone">+7 111 12 13</a>
+        <div class="socials">
+          <a href="#" aria-label="Facebook" class="socials__link">f</a>
+          <a href="#" aria-label="Instagram" class="socials__link">◎</a>
+        </div>
+      </div>
+
+      <button class="burger" id="burger" aria-label="Меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ОБЛОЖКА -->
+  <section class="hero">
+    <div class="hero__overlay"></div>
+    <div class="container hero__content">
+      <p class="hero__eyebrow">Мебель для бьюти-индустрии</p>
+      <h1 class="hero__title">Кресла и стулья<br>для салонов красоты</h1>
+      <p class="hero__subtitle">Комфорт для мастера и клиента: удобная, прочная и стильная мебель
+        для студий маникюра, педикюра и частных мастеров.</p>
+      <a href="#catalog" class="btn btn--primary">Смотреть каталог</a>
+    </div>
+  </section>
+
+  <!-- ПРЕИМУЩЕСТВА -->
+  <section class="advantages" id="advantages">
+    <div class="container">
+      <div class="advantages__grid">
+        <div class="advantage">
+          <div class="advantage__icon">✦</div>
+          <h3 class="advantage__title">Комфорт на весь день</h3>
+          <p class="advantage__text">Эргономика для многочасовой работы мастера без усталости спины.</p>
+        </div>
+        <div class="advantage">
+          <div class="advantage__icon">◈</div>
+          <h3 class="advantage__title">Прочные материалы</h3>
+          <p class="advantage__text">Металлический каркас и износостойкая эко-кожа — служат годами.</p>
+        </div>
+        <div class="advantage">
+          <div class="advantage__icon">☍</div>
+          <h3 class="advantage__title">Доставка по России</h3>
+          <p class="advantage__text">Отправляем в любой город, аккуратная упаковка и сборка.</p>
+        </div>
+        <div class="advantage">
+          <div class="advantage__icon">✓</div>
+          <h3 class="advantage__title">Гарантия 24 месяца</h3>
+          <p class="advantage__text">Официальная гарантия и поддержка после покупки.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- КАТАЛОГ -->
+  <section class="catalog" id="catalog">
+    <div class="container">
+      <h2 class="section-title">Популярные товары</h2>
+      <div class="catalog__grid" id="catalogGrid">
+        <!-- карточки товаров рендерятся из js/main.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- О НАС -->
+  <section class="about" id="about">
+    <div class="container about__inner">
+      <div class="about__text">
+        <h2 class="about__title">О нас</h2>
+        <p>FitBest — производитель и поставщик мебели для салонов красоты. Мы создаём кресла
+          и стулья, которые выдерживают ежедневную нагрузку и остаются красивыми годами.</p>
+        <p>Нам доверяют частные мастера маникюра и сети салонов по всей стране. Помогаем
+          подобрать мебель под ваш интерьер и бюджет.</p>
+        <a href="#contacts" class="btn btn--ghost">Узнать подробнее →</a>
+      </div>
+      <div class="about__media">
+        <img src="assets/about.svg" alt="Мебель FitBest">
+      </div>
+    </div>
+  </section>
+
+  <!-- ФУТЕР / КОНТАКТЫ -->
+  <footer class="footer" id="contacts">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <img src="assets/logo-fitbest.png" alt="FitBest" class="footer__logo">
+        <p class="footer__copy">© 2026 FitBest. Все права защищены.</p>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__heading">Меню</h4>
+        <a href="#top">Главная</a>
+        <a href="#catalog">Каталог</a>
+        <a href="#about">О нас</a>
+        <a href="#advantages">Преимущества</a>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__heading">Контакты</h4>
+        <p>тел. <a href="tel:+71111213">+7 111 12 13</a></p>
+        <p>адрес: г. Москва, ул. Вавилова, д. 14</p>
+        <p>почта: <a href="mailto:info@fitbest.ru">info@fitbest.ru</a></p>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__heading">Соцсети</h4>
+        <a href="#">Facebook</a>
+        <a href="#">Instagram</a>
+        <a href="#">Telegram</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- МОДАЛКА ЗАКАЗА -->
+  <div class="modal" id="orderModal" aria-hidden="true">
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal__close" data-close aria-label="Закрыть">×</button>
+      <h3 class="modal__title" id="modalTitle">Оформить заказ</h3>
+      <p class="modal__product" id="modalProduct"></p>
+      <form class="form" id="orderForm" novalidate>
+        <label class="form__field">
+          <span>Ваше имя</span>
+          <input type="text" name="name" required placeholder="Как к вам обращаться">
+        </label>
+        <label class="form__field">
+          <span>Телефон</span>
+          <input type="tel" name="phone" required placeholder="+7 (___) ___-__-__">
+        </label>
+        <button type="submit" class="btn btn--primary form__submit">Отправить заявку</button>
+        <p class="form__note">Нажимая кнопку, вы соглашаетесь на обработку персональных данных.</p>
+      </form>
+      <div class="form__success" id="formSuccess" hidden>
+        <p>Спасибо! Заявка отправлена — мы свяжемся с вами в ближайшее время.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

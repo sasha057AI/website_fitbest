@@ -105,9 +105,51 @@ function initModal() {
   });
 }
 
+/* ---- Тень шапки при прокрутке ---- */
+function initHeaderScroll() {
+  const header = document.querySelector('.header');
+  if (!header) return;
+  const onScroll = () => header.classList.toggle('is-scrolled', window.scrollY > 10);
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+}
+
+/* ---- Плавное появление блоков при прокрутке ----
+ * Используем позицию элемента (getBoundingClientRect) + запасной таймер,
+ * чтобы контент гарантированно показывался даже если что-то пойдёт не так. */
+function initReveal() {
+  document.documentElement.classList.add('js');
+  const targets = [...document.querySelectorAll(
+    '.advantage, .card, .about__text, .about__media, .faq__item, .hero__content'
+  )];
+  const reveal = (el) => el.classList.add('in');
+  const inView = (el) => {
+    const r = el.getBoundingClientRect();
+    return r.top < (window.innerHeight || document.documentElement.clientHeight) * 0.9 && r.bottom > 0;
+  };
+  let ticking = false;
+  const check = () => {
+    ticking = false;
+    targets.forEach(el => { if (!el.classList.contains('in') && inView(el)) reveal(el); });
+  };
+  const onScroll = () => { if (!ticking) { ticking = true; requestAnimationFrame(check); } };
+
+  targets.forEach((t, i) => {
+    t.classList.add('reveal');
+    t.style.transitionDelay = (Math.min(i % 4, 3) * 70) + 'ms';
+  });
+  check(); // показать то, что уже в зоне видимости
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
+  // страховка: через 2.5 с показываем всё в любом случае
+  setTimeout(() => targets.forEach(reveal), 2500);
+}
+
 /* ---- Инициализация ---- */
 document.addEventListener('DOMContentLoaded', () => {
   renderCatalog();
   initBurger();
   initModal();
+  initHeaderScroll();
+  initReveal();
 });
